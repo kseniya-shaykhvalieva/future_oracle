@@ -7,6 +7,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+API_KEY = os.getenv('API_KEY')
 
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
@@ -19,6 +20,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'predictions',
+    'users',
 ]
 
 MIDDLEWARE = [
